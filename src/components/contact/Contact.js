@@ -69,7 +69,7 @@ const Contact = ({ handleContactSubmit }) => {
             onClose={onClose}
             handleContactSubmit={handleContactSubmit}
             msg="Please Fill out required fields!"
-            staus="fail"
+            status='error'
             childComponent={<SuccessModal />}
           />
         }
