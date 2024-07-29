@@ -13,11 +13,10 @@ const SuccessForm = () => {
   textAlign='center'
   height='80%'
   borderRadius={5}
-  textColor='black'
-
+bg="transparent"
   
 >
-  <AlertIcon boxSize='40px' mr={0} />
+  <AlertIcon boxSize='40px'  mr={0} />
   <AlertTitle mt={4} mb={1} fontSize='lg'>
     <h1 className='contact-heading'> Application submitted!</h1>
    
