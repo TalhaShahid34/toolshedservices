@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Alert,
   AlertIcon,
@@ -6,31 +6,26 @@ import {
   AlertDescription,
   Box,
   CloseButton,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
-function SuccessModal({onClose}) {
-
+function SuccessModal({ onClose, msg,status }) {
   return (
     <>
-    <Alert status='success'  zIndex="12">
-      <AlertIcon />
-      <Box>
-        <AlertTitle>Success!</AlertTitle>
-        <AlertDescription>
-          Thanks for contacting us! We will get back to you soon.
-        </AlertDescription>
-      </Box>
-      <CloseButton
-        alignSelf='flex-start'
-        position='relative'
-        right={-1}
-        top={-1}
-        onClick={onClose}
-        
-      />
-    </Alert>
+      <Alert status={status} zIndex="12">
+        <AlertIcon />
+        <Box>
+          {/* <AlertTitle>Success!</AlertTitle> */}
+          <AlertDescription>{msg} </AlertDescription>
+        </Box>
+        <CloseButton
+          alignSelf="flex-start"
+          position="relative"
+          right={-1}
+          top={-1}
+          onClick={onClose}
+        />
+      </Alert>
     </>
-
   );
 }
 

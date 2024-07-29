@@ -25,9 +25,10 @@ const HomePage = () => {
 
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
-  const handleContactSubmit = () => {
+  const handleContactSubmit = (email, message ) => {
     onClose();
     console.log("Contact form submitted");
+    console.log(email, message);
     setShowSuccessModal(true);
     onOpen();
   };
@@ -88,6 +89,8 @@ const HomePage = () => {
             isOpen={isOpen}
             onClose={onClose}
             handleContactSubmit={handleContactSubmit}
+            msg="Thanks for contacting us! We will get back to you soon."
+            status="success"
             childComponent={showSuccessModal ? <SuccessModal /> : <Contact />}
           />
         )}
