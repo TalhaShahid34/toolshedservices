@@ -16,6 +16,7 @@ import About from "../components/about/About";
 import Navbar from "../components/navbar/Navbar";
 import TechCarousel from "../components/technologiesCarousel/TechCarousel";
 import CustomModal from "../components/contact/Modal";
+import SuccessForm from "../components/contact/SuccessForm";
 
 const HomePage = () => {
   const [isLargeScreen] = useMediaQuery("(min-width: 1000px)");
@@ -26,11 +27,18 @@ const HomePage = () => {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleContactSubmit = (email, message ) => {
+    if(showSuccessModal){
+
+      return;
+    }
     onClose();
     console.log("Contact form submitted");
     console.log(email, message);
+    
     setShowSuccessModal(true);
+    if(!isLargeScreen){
     onOpen();
+  }
   };
 
   return (
@@ -75,7 +83,11 @@ const HomePage = () => {
               {isLargeScreen ? (
                 <Box id="contact-wrapper">
                   <Center h="100%">
-                    <Contact handleContactSubmit={handleContactSubmit} />
+                    {showSuccessModal ? (
+                      <SuccessForm  />
+                    ) : (
+                      <Contact handleContactSubmit={handleContactSubmit} />
+                    )}
                   </Center>
                 </Box>
               ) : null}
