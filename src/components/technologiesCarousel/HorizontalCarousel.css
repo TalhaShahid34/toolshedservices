@@ -24,9 +24,7 @@
   box-shadow: 4px 1px 6px rgba(235, 214, 214, 0.4); /* Subtle shadow effect */
   transition: transform 0.3s ease;
 }
-.scrolling-slide-img:hover {
-  transform: scale(1.1);
-}
+
 @keyframes slide {
   from {
     transform: translateX(0);
