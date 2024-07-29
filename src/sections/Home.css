@@ -45,6 +45,7 @@
     font-size: 17px;
     font-weight: bold;
     transition: fade 0.5s;
+    transform: translateY(-5px);
   }
   .button-contact:focus-visible {
     box-shadow:
@@ -80,11 +81,21 @@
       box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     }
     100% {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 8px 16px hsla(21, 86%, 78%, 0.705);;
     }
   }
   
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   #contact-wrapper {
     background-color: #f7a674c7;
     width: auto;
@@ -94,6 +105,8 @@
     z-index: 0; /* Make sure the default z-index is above other elements */
     box-shadow: 0 4px 8px hsla(21, 86%, 78%, 0.705);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for shadow and transform */
+    animation: fadeInUp 1.5s ease-out;
+
   }
   #contact-wrapper:hover {
     z-index: 1; /* Bring element to the front */

@@ -8,12 +8,29 @@
     overflow: hidden; /* Ensures the overflow is hidden */
     width: 100%; 
     animation: typing 0.9s steps(10) forwards;
+    
   }
-  
+  .logo-heading:hover{
+    /* animation: pulse 1.5s infinite;
+  animation-timing-function: linear;   */
+  animation: wiggle 75ms infinite;
+  animation-timing-function: linear;  
+  }
   @keyframes typing {
     from { width: 0%; }
     to { width: 100%; }
   }
+  @keyframes wiggle {
+    0% { transform: translate(2px, 0); }
+    50% { transform: translate(-2px, 0); }
+    100% { transform: translate(2px, 0); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1);}
+    100% { transform: scale(1); }
+    }
   
 
    

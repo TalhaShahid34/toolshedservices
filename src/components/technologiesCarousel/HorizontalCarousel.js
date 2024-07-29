@@ -7,7 +7,7 @@ const HorizontalCarousel = ({ images }) => {
       gradient={true}
       gradientWidth={80}
       gradientColor="#051C68"
-      pauseOnHover={true}
+    //   pauseOnHover={true}
       speed={20}
     >
       {images.map((image, index) => (
