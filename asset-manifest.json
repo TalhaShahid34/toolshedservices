@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/toolshedservices/static/css/main.92ebc923.css",
+    "main.js": "/toolshedservices/static/js/main.1160cf51.js",
+    "static/js/453.ab2adbb9.chunk.js": "/toolshedservices/static/js/453.ab2adbb9.chunk.js",
+    "static/media/Python.png": "/toolshedservices/static/media/Python.b07382034a8548cfd211.png",
+    "static/media/bq.png": "/toolshedservices/static/media/bq.b7d87e9bdf4fb13b1c58.png",
+    "static/media/React.png": "/toolshedservices/static/media/React.9bec73257109d07dc4dc.png",
+    "static/media/Postgresql.png": "/toolshedservices/static/media/Postgresql.94cb75e20e3540972a25.png",
+    "static/media/Dbt.png": "/toolshedservices/static/media/Dbt.bfde9871e19c7942822a.png",
+    "static/media/AirByte.png": "/toolshedservices/static/media/AirByte.89fcce4a162ed8423151.png",
+    "static/media/Gql.png": "/toolshedservices/static/media/Gql.48b1f1d18e56f5b62e15.png",
+    "static/media/MySql.png": "/toolshedservices/static/media/MySql.4a549273774e909b3032.png",
+    "static/media/retool_logo_black.png": "/toolshedservices/static/media/retool_logo_black.447bf67b2153de54d724.png",
+    "static/media/slick.svg": "/toolshedservices/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/toolshedservices/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/toolshedservices/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/toolshedservices/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/toolshedservices/index.html",
+    "main.92ebc923.css.map": "/toolshedservices/static/css/main.92ebc923.css.map",
+    "main.1160cf51.js.map": "/toolshedservices/static/js/main.1160cf51.js.map",
+    "453.ab2adbb9.chunk.js.map": "/toolshedservices/static/js/453.ab2adbb9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92ebc923.css",
+    "static/js/main.1160cf51.js"
+  ]
+}
