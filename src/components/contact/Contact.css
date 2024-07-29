@@ -83,6 +83,7 @@
   transition: all 0.3s;
   border-bottom: 2px solid #051C68;
 }
+
 .contact-text-input {
   color: #051C68;
 
@@ -97,6 +98,13 @@
   font-family: "Montserrat", sans-serif;
   transition: all 0.3s;
   border-bottom: 2px solid #051C68;
+}
+.text{
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: #051C68;
+
 }
 
 @media screen and (min-width: 2000px) {
@@ -119,6 +127,11 @@
     height: 55px;
 
   }
+  .text{
+    font-size: 26px;
+  
+  }
+  
 }
 
 @media screen and (min-width: 2400px) {
@@ -139,6 +152,10 @@
     font-size: 25px;
     height: 65px;
 
+  }
+  .text{
+    font-size: 36px;
+  
   }
 }
 @media screen and (min-width: 3000px) {
@@ -161,6 +178,10 @@
     height: 75px;
 
   }
+  .text{
+    font-size: 46px;
+  
+  }
 }
 @media screen and (min-width: 4000px) {
   .contact-heading {
@@ -182,6 +203,10 @@
     height: 85px;
 
   }
+  .text{
+    font-size: 56px;
+  
+  }
 }
 @media screen and (min-width: 5000px) {
   .contact-heading {
@@ -202,5 +227,9 @@
     font-size: 53px;
     height: 95px;
 
+  }
+  .text{
+    font-size: 55px;
+  
   }
 }

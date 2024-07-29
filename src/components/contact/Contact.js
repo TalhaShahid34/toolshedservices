@@ -3,6 +3,7 @@ import { Box, FormControl, Center,useDisclosure,  } from "@chakra-ui/react";
 import CustomModal from "./Modal";
 import SuccessModal from "./SuccessModal";
 import "./Contact.css";
+
 const Contact = ({ handleContactSubmit }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
