@@ -1,0 +1,95 @@
+.scrolling-container {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+.scrolling-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  animation: slide 68s linear infinite;
+}
+.scrolling-slide-img {
+  margin-right: 60px;
+  height: 70px;
+  /* min-height: 60px; */
+  width: 80px;
+  padding: 10px;
+  border-radius: 15%;
+  background-color: white;
+  box-shadow: 4px 1px 6px rgba(235, 214, 214, 0.4); /* Subtle shadow effect */
+  transition: transform 0.3s ease;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@media screen and (min-width: 1300px) {
+  .scrolling-slide-img {
+    margin-right: 120px;
+    height: 100px;
+    width: 100px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .scrolling-slide-img {
+    margin-right: 130px;
+    height: 100px;
+    width: 100px;
+  }
+}
+@media screen and (min-width: 2400px) {
+  .scrolling-slide-img {
+    margin-right: 200px;
+    height: 120px;
+    width: 120px;
+  }
+}
+@media screen and (min-width: 3000px) {
+  .scrolling-slide-img {
+    margin-right: 250px;
+    height: 140px;
+    width: 150px;
+  }
+}
+@media screen and (min-width: 4000px) {
+  .scrolling-slide-img {
+    margin-right: 350px;
+    height: 200px;
+    width: 210px;
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 5000px) {
+  .scrolling-slide-img {
+    margin-right: 450px;
+    height: 250px;
+    width: 260px;
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 6000px) {
+  .scrolling-slide-img {
+    margin-right: 550px;
+    height: 350px;
+    width: 360px;
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 7000px) {
+  .scrolling-slide-img {
+    margin-right: 700px;
+    height: 440px;
+    width: 450px;
+  }
+}
+/* @media screen and (min-width: 768px) { */

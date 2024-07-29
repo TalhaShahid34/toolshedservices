@@ -1,0 +1,27 @@
+
+  .logo-heading {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: xxx-large;
+    color: #F7B896;
+    white-space: nowrap; /* Keeps the text on a single line */
+    overflow: hidden; /* Ensures the overflow is hidden */
+    width: 100%; 
+    animation: typing 0.9s steps(10) forwards;
+  }
+  
+  @keyframes typing {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+  
+
+   
+   @media screen and (min-width: 1920px) {
+    .logo-heading {
+      font-weight: 700;
+      font-size: 90px;
+      color: #F7B896;
+          }
+          
+      }
