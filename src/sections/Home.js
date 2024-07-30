@@ -47,27 +47,27 @@ const HomePage = () => {
     if (!isLargeScreen) {
       onOpen();
     }
-    // setTimeout(() => {
-    //   setLoading(false);
-    //   setShowSuccessModal(true);
-      
-    // }, 2000);
-    // Send the email using EmailJS
-    emailjs.send(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID, // Service ID from your EmailJS account
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Template ID from your EmailJS account
-      { ...emailParams },
-      process.env.REACT_APP_EMAILJS_USER_ID // User ID from your EmailJS account
-    )
-    .then((response) => {
-      console.log('Email sent successfully:', response.status, response.text);
+    setTimeout(() => {
       setLoading(false);
       setShowSuccessModal(true);
       
-    })
-    .catch((err) => {
-      console.error('Failed to send email:', err);
-    });
+    }, 2000);
+    // Send the email using EmailJS
+    // emailjs.send(
+    //   process.env.REACT_APP_EMAILJS_SERVICE_ID, // Service ID from your EmailJS account
+    //   process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Template ID from your EmailJS account
+    //   { ...emailParams },
+    //   process.env.REACT_APP_EMAILJS_USER_ID // User ID from your EmailJS account
+    // )
+    // .then((response) => {
+    //   console.log('Email sent successfully:', response.status, response.text);
+    //   setLoading(false);
+    //   setShowSuccessModal(true);
+      
+    // })
+    // .catch((err) => {
+    //   console.error('Failed to send email:', err);
+    // });
   };
 
 
@@ -100,7 +100,7 @@ const HomePage = () => {
               <Box p="10px" justifyContent="space-around" alignItems="center">
                 <About />
                 {!isLargeScreen ? (
-                  <Center>
+                  <Center >
                     <button className="button-contact" onClick={onOpen}>
                       Contact Us
                     </button>
@@ -109,8 +109,8 @@ const HomePage = () => {
               </Box>
             </Center>
 
-            <Center id="center-contact-wrapper" w="-moz-fit-content" pb="15px">
               {isLargeScreen ? (
+            <Center id="center-contact-wrapper" w="-moz-fit-content" pb="15px">
                 <Box id="contact-wrapper">
                   <Center h="100%">
                     {showSuccessModal ? (
@@ -120,8 +120,8 @@ const HomePage = () => {
                     )}
                   </Center>
                 </Box>
-              ) : null}
             </Center>
+              ) : null}
           </Flex>
           <TechCarousel />
         </Flex>

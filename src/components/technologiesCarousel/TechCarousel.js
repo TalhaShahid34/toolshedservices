@@ -19,7 +19,7 @@ const technologies = [
     image: Gql,
   },
   {
-    name: "MySql",
+    name: "MySQL",
     link: "https://MySql.com",
 
     image: MySql,
@@ -31,8 +31,8 @@ const technologies = [
     image: retool_logo_black,
   },
   {
-    name: "DBT",
-    link: "https://DBT.com",
+    name: "dbt",
+    link: "https://dbt.com",
 
     image: Dbt,
   },
@@ -54,7 +54,7 @@ const technologies = [
     image: Python,
   },
   {
-    name: "Postgresql",
+    name: "PostgreSQL",
     link: "https://Postgresql.com",
 
     image: Postgresql,
@@ -66,7 +66,7 @@ const technologies = [
     image: bq,
   },
   {
-    name: "AirByte",
+    name: "Airbyte",
     link: "https://AirByte.com",
     image: AirByte,
   },

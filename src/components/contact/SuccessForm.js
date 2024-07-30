@@ -1,6 +1,8 @@
 import React from 'react';
 import './Contact.css';
 import { Alert, AlertIcon, AlertTitle, AlertDescription } from '@chakra-ui/react';
+import { CheckIcon } from '@chakra-ui/icons';
+
 const SuccessForm = () => {
 
     return (   
@@ -16,15 +18,16 @@ const SuccessForm = () => {
 bg="transparent"
   
 >
-  <AlertIcon boxSize='40px'  mr={0} />
+  
+  {/* <AlertIcon boxSize='40px'  mr={0} /> */}
+  <CheckIcon boxSize={14} color="#051c68" />
   <AlertTitle mt={4} mb={1} fontSize='lg'>
-    <h1 className='contact-heading'> Application submitted!</h1>
    
   </AlertTitle>
   <AlertDescription maxWidth='auto' >
     <p className='text' color='black'>
 
-    Thanks for submitting your application. Our team will get back to you soon.
+    Thanks for contacting. Our team will get back to you soon.
     </p>
   </AlertDescription>
 </Alert>

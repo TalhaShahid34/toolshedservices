@@ -11,18 +11,18 @@
 
 
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 20px;
-    font-size: large;
     color: #F7B896;
     /* animation: fadeInUp 1.5s ease-out; */
     
 
 }
 .about-text:hover {
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
         z-index: 1; /* Bring element to the front */
-        animation: hoverOutEffect 0.3s forwards; /* Apply the animation */
+        /* animation: hoverOutEffect 0.3s forwards; Apply the animation */
         /* transition: transform 0.3s ease;Smooth transition for shadow and transform */
     
 }
@@ -50,34 +50,34 @@
         .about-text {
     line-height: 25px;
 
-            font-size: 25px;
+            font-size: 20px;
         }
         
     }
     @media screen and (min-width: 2400px) {
         .about-text {
-    line-height: 30px;
+             line-height: 30px;
 
-            font-size: 30px;
+            font-size: 25px;
         }
         
     }
     @media screen and (min-width: 3000px) {
         .about-text {
     line-height: 40px;
-            font-size: 40px;
+            font-size: 35px;
         }
     }
     @media screen and (min-width: 4500px) {
         .about-text {
     line-height: 55px;
-            font-size: 55px;
+            font-size: 50px;
         }
     } 
     @media screen and (min-width: 6000px) {
         .about-text {
     line-height: 65px;
-            font-size: 65px;
+            font-size: 60px;
         }
         
     }

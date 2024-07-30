@@ -6,11 +6,11 @@
 .button-contact {
     background-color: transparent;
     border: 3px solid #F7B896;
-    border-radius: 30px;
+    border-radius: 25px;
     box-sizing: border-box;
     color: #F7B896;
     cursor: pointer;
-    display: inline-block;
+    /* display: inline-block; */
     font-family:
       Circular,
       -apple-system,
@@ -36,8 +36,6 @@
     user-select: none;
     -webkit-user-select: none;
     width: 200px;
-    margin-top: 20px;
-    margin-right: 50px;
   }
   .button-contact:hover {
     background-color: #F7B896;
@@ -100,6 +98,8 @@
     background-color: #f7a674c7;
     width: auto;
     height:55vh;
+    max-width: 330px;
+    max-height: 400px;
     border-radius: 15px;
     padding: 0 25px;
     z-index: 0; /* Make sure the default z-index is above other elements */

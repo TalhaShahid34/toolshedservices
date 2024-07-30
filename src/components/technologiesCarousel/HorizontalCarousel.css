@@ -39,7 +39,7 @@
   padding: 10px;
   border-radius: 15%;
   background-color: white;
-  box-shadow: 4px 1px 6px rgba(235, 214, 214, 0.4); /* Subtle shadow effect */
+  /* box-shadow: 4px 1px 6px rgba(235, 214, 214, 0.4); Subtle shadow effect */
   transition: transform 0.3s ease; /* Smooth transition */
   z-index: 1; 
   bottom: 1px;
@@ -122,7 +122,7 @@
 }
 @media screen and (min-width: 6000px) {
   .scrolling-slide-img {
-    margin-right: 550px;
+    margin: 275px;
     height: 350px;
     width: 360px;
     padding: 30px;

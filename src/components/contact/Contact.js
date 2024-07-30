@@ -27,7 +27,7 @@ const Contact = ({ handleContactSubmit ,loading}) => {
         <form onSubmit={validateAndSubmit}>
         <Center>
           <h1 className="contact-heading" mb={4}>
-            Contact Us
+            Contact us
           </h1>
         </Center>
            <Center>
@@ -59,7 +59,7 @@ const Contact = ({ handleContactSubmit ,loading}) => {
           </FormControl>
            </Center>
 
-           <Center>
+           <Center >
 <button className="button-submit" type="submit" >
             { loading ?
           <Spinner color="green.500" size="lg" thickness="2.5px" />
