@@ -5,10 +5,10 @@ import {
   useMediaQuery,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import "./Home.css";
 import "react-fancy-circular-carousel/FancyCarousel.css";
-
+import emailjs from 'emailjs-com';
 //components
 import Contact from "../components/contact/Contact";
 import SuccessModal from "../components/contact/SuccessModal";
@@ -20,26 +20,47 @@ import SuccessForm from "../components/contact/SuccessForm";
 
 const HomePage = () => {
   const [isLargeScreen] = useMediaQuery("(min-width: 1000px)");
-
-  //Contact Form Modal state
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
-  const handleContactSubmit = (email, message ) => {
-    if(showSuccessModal){
-
+  const handleContactSubmit = (data) => {
+    if (showSuccessModal) {
       return;
     }
+
     onClose();
     console.log("Contact form submitted");
-    console.log(email, message);
+    console.log(data.email);
+    console.log(data.name);
+    console.log(data.message);
     
-    setShowSuccessModal(true);
-    if(!isLargeScreen){
-    onOpen();
-  }
+    // Prepare email parameters
+    const emailParams = {
+      user_name:data.name,
+      user_email:data.email,
+      message:  data.message ,
+    };
+    console.log(emailParams);
+
+    // Send the email using EmailJS
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID, // Service ID from your EmailJS account
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Template ID from your EmailJS account
+      { ...emailParams },
+      process.env.REACT_APP_EMAILJS_USER_ID // User ID from your EmailJS account
+    )
+    .then((response) => {
+      console.log('Email sent successfully:', response.status, response.text);
+      setShowSuccessModal(true);
+      if (!isLargeScreen) {
+        onOpen();
+      }
+    })
+    .catch((err) => {
+      console.error('Failed to send email:', err);
+    });
   };
+
 
   return (
     <>
@@ -60,7 +81,7 @@ const HomePage = () => {
           <Navbar />
 
           <Flex
-            h="65vh"
+            h="64vh"
             alignItems="center"
             justify="space-around"
             direction={{ base: "column", lg: "row" }}

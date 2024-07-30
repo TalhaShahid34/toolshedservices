@@ -9,14 +9,22 @@ const HorizontalCarousel = ({ images }) => {
       gradientColor="#051C68"
       pauseOnHover={true}
       speed={20}
+      
     >
-      {images.map((image, index) => (
+
+      {images.map((element, index) => (
+        <div className="scrolling-slide" key={index}>
         <img
           className="scrolling-slide-img"
-          src={image}
-          alt={`Image ${image}`}
+          src={element.image}
+          alt={`Image ${element.image}`}
         />
+          {/* <a href={'https://'+element.name+'.com'} className="name-text" target="_blank">{element.name}  </a> */}
+          <a href={element.link} className="name-text" target="_blank">{element.name}  </a>
+        
+        </div>
       ))}
+
     </Marquee>
   );
 };

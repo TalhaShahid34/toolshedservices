@@ -13,7 +13,7 @@ const Navbar = () => {
       zIndex={10}
     >
       
-      <Flex  shadow="lg" h="auto" justifyContent="center" alignItems="center" p={2}  >
+      <Flex  /*shadow="lg"*/ h="auto" justifyContent="center" alignItems="center" p={2}  >
       <Center  >
       <h1  className="logo-heading"    >{"{toolshed}"}</h1>
       </Center>

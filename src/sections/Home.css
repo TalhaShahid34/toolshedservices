@@ -103,16 +103,16 @@
     border-radius: 15px;
     padding: 0 25px;
     z-index: 0; /* Make sure the default z-index is above other elements */
-    box-shadow: 0 4px 8px hsla(21, 86%, 78%, 0.705);
+    /* box-shadow: 0 4px 8px hsla(21, 86%, 78%, 0.705); */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for shadow and transform */
-    animation: fadeInUp 1.5s ease-out;
+    /* animation: fadeInUp 1.5s ease-out; */
 
   }
   #contact-wrapper:hover {
     z-index: 1; /* Bring element to the front */
     animation: hoverOutEffect 0.3s forwards; /* Apply the animation */
-    box-shadow: 0 4px 8px rgba(247, 184, 151, 0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for shadow and transform */
+    /* box-shadow: 0 4px 8px rgba(247, 184, 151, 0.6); */
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; Smooth transition for shadow and transform */
 
   }
 

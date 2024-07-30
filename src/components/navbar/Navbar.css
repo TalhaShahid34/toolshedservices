@@ -10,12 +10,12 @@
     animation: typing 0.9s steps(10) forwards;
     
   }
-  .logo-heading:hover{
+  /* .logo-heading:hover{
     /* animation: pulse 1.5s infinite;
   animation-timing-function: linear;   */
-  animation: wiggle 75ms infinite;
+  /* animation: wiggle 75ms infinite;
   animation-timing-function: linear;  
-  }
+  } */ 
   @keyframes typing {
     from { width: 0%; }
     to { width: 100%; }

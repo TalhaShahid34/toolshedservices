@@ -13,43 +13,61 @@ import "react-fancy-circular-carousel/FancyCarousel.css";
 import HorizontalCarousel from "./HorizontalCarousel";
 const technologies = [
   {
-    // name: "GraphQL",
+    name: "GraphQL",
+    link: "https://GraphQL.org",
+
     image: Gql,
   },
   {
-    // name: "Retool",
+    name: "MySql",
+    link: "https://MySql.com",
+
     image: MySql,
   },
   {
-    // name: "Retool",
+    name: "Retool",
+    link: "https://Retool.com",
+
     image: retool_logo_black,
   },
   {
-    // name: "Looker",
+    name: "DBT",
+    link: "https://DBT.com",
+
     image: Dbt,
   },
   {
-    // name: "Looker",
+    name: "Looker",
+    link: "https://Looker.com",
+
     image: GoogleLooker,
   },
   {
-    // name: "React",
+    link: "https://React.com",
+    name: "React",
     image: React,
   },
   {
-    // name: "Python",
+    name: "Python",
+    link: "https://Python.org",
+
     image: Python,
   },
   {
-    // name: "GoogleBigQuery",
+    name: "Postgresql",
+    link: "https://Postgresql.com",
+
     image: Postgresql,
   },
   {
-    // name: "BigQuery
+    name: "BigQuery",
+    link: "https://BigQuery.org",
+
     image: bq,
   },
   {
-    // name: "AirByte",
+    name: "AirByte",
+    link: "https://AirByte.com",
     image: AirByte,
   },
 ];
@@ -57,7 +75,7 @@ const images = technologies.map((tech) => tech.image);
 const TechCarousel = () => {
   return (
     <Box h="20vh" pt="5px" pb="10px">
-      <HorizontalCarousel images={images} />
+      <HorizontalCarousel images={technologies} />
     </Box>
   );
 };

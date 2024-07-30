@@ -12,13 +12,13 @@ const Contact = ({ handleContactSubmit }) => {
     event.preventDefault();
     let email = document.getElementById("email");
     let message = document.getElementById("message");
-    console.log(email.value);
+    let name = document.getElementById("name");
     if(!email ||!email.value || !message ||!message.value){
       // setIsNotValid(true);
       onOpen();
       return;
     }
-    handleContactSubmit({ email: email.value, message: message.value });
+    handleContactSubmit({ email: email.value, message: message.value,name:name.value });
   }
   return (
     <>
@@ -30,8 +30,9 @@ const Contact = ({ handleContactSubmit }) => {
           </h1>
         </Center>
            <Center>
-          <FormControl id="name" mb={4} isRequired>
+          <FormControl  mb={4} isRequired>
             <input
+            id="name"
               className="contact-input"
               type="text"
               placeholder="Enter your name"
