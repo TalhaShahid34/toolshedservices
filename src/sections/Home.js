@@ -3,8 +3,8 @@ import {
   Center,
   Flex,
   useMediaQuery,
-  useDisclosure,
-} from "@chakra-ui/react";
+  useDisclosure,Spinner} from "@chakra-ui/react";
+
 import React, { useState,useRef } from "react";
 import "./Home.css";
 import "react-fancy-circular-carousel/FancyCarousel.css";
@@ -22,11 +22,13 @@ const HomePage = () => {
   const [isLargeScreen] = useMediaQuery("(min-width: 1000px)");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleContactSubmit = (data) => {
     if (showSuccessModal) {
       return;
     }
+    setLoading(true);
 
     onClose();
     console.log("Contact form submitted");
@@ -40,8 +42,16 @@ const HomePage = () => {
       user_email:data.email,
       message:  data.message ,
     };
-    console.log(emailParams);
 
+    //checking for phone screen and pening the modal
+    if (!isLargeScreen) {
+      onOpen();
+    }
+    // setTimeout(() => {
+    //   setLoading(false);
+    //   setShowSuccessModal(true);
+      
+    // }, 2000);
     // Send the email using EmailJS
     emailjs.send(
       process.env.REACT_APP_EMAILJS_SERVICE_ID, // Service ID from your EmailJS account
@@ -51,10 +61,9 @@ const HomePage = () => {
     )
     .then((response) => {
       console.log('Email sent successfully:', response.status, response.text);
+      setLoading(false);
       setShowSuccessModal(true);
-      if (!isLargeScreen) {
-        onOpen();
-      }
+      
     })
     .catch((err) => {
       console.error('Failed to send email:', err);
@@ -107,7 +116,7 @@ const HomePage = () => {
                     {showSuccessModal ? (
                       <SuccessForm  />
                     ) : (
-                      <Contact handleContactSubmit={handleContactSubmit} />
+                      <Contact handleContactSubmit={handleContactSubmit} loading={loading} />
                     )}
                   </Center>
                 </Box>
@@ -122,9 +131,10 @@ const HomePage = () => {
             isOpen={isOpen}
             onClose={onClose}
             handleContactSubmit={handleContactSubmit}
+            loading={loading}
             msg="Thanks for contacting us! We will get back to you soon."
             status="success"
-            childComponent={showSuccessModal ? <SuccessModal /> : <Contact />}
+            childComponent={showSuccessModal ?(loading?<Spinner color="green.500" size="lg" thickness="2.5px" />: <SuccessModal />) : <Contact />}
           />
         )}
       </Box>

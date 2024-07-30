@@ -19,7 +19,7 @@
   position: absolute;
   top: 1px; /* Position text slightly above the image */
   color: #F7B896;
-  z-index: 25; /* Ensure text is above the image */
+  z-index: 2; /* Ensure text is above the image */
   transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
   opacity: 0; /* Initially invisible */
   
@@ -70,17 +70,31 @@
   }
 }
 @media screen and (min-width: 1900px) {
+
   .scrolling-slide-img {
-    margin-right: 130px;
+    margin:0 65px;
     height: 100px;
     width: 100px;
+  }
+  .scrolling-slide:hover .name-text {
+    opacity: 1; /* Fade in the text */
+    border-radius: 5px;
+    top: 20px;
+  
   }
 }
 @media screen and (min-width: 2400px) {
   .scrolling-slide-img {
-    margin-right: 200px;
+    margin:0 200px;
     height: 120px;
     width: 120px;
+  }
+  .scrolling-slide:hover .name-text {
+    opacity: 1; /* Fade in the text */
+    border-radius: 5px;
+    top: 20px;
+    
+  
   }
 }
 @media screen and (min-width: 3000px) {

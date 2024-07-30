@@ -1,10 +1,11 @@
 import React, {useState } from "react";
-import { Box, FormControl, Center,useDisclosure,  } from "@chakra-ui/react";
+import { Box, FormControl, Center,useDisclosure, Spinner } from "@chakra-ui/react";
 import CustomModal from "./Modal";
 import SuccessModal from "./SuccessModal";
 import "./Contact.css";
+import { LineWave } from "react-loader-spinner";
 
-const Contact = ({ handleContactSubmit }) => {
+const Contact = ({ handleContactSubmit ,loading}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   // const [isNotValid, setIsNotValid] = useState(false);
@@ -59,8 +60,15 @@ const Contact = ({ handleContactSubmit }) => {
            </Center>
 
            <Center>
-          <button className="button-submit" type="submit" >
-            Submit
+<button className="button-submit" type="submit" >
+            { loading ?
+          <Spinner color="green.500" size="lg" thickness="2.5px" />
+              // <LineWave color={'#051C68'} loading={loading} borderRadius={2} size={5} />
+              :
+
+            
+          "Submit"
+}
           </button>
           </Center>
         </form>

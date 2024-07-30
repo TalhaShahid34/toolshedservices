@@ -13,7 +13,7 @@ import {
 import Contact from './Contact';
 import SuccessModal from './SuccessModal';
 
-  function CustomModal({isOpen,onClose,childComponent,handleContactSubmit,msg,status}) {
+  function CustomModal({isOpen,onClose,childComponent,handleContactSubmit,msg,status,loading}) {
    
  
     return (
@@ -26,7 +26,7 @@ import SuccessModal from './SuccessModal';
            backdropFilter="blur(0.9px) hue-rotate(90deg)"/>
           <ModalContent bg="#F7B890">
             <ModalCloseButton/>
-          {React.cloneElement(childComponent, { handleContactSubmit,onClose,msg,status})}
+          {React.cloneElement(childComponent, { handleContactSubmit,onClose,msg,status,loading})}
           </ModalContent>
         </Modal>
       </>
