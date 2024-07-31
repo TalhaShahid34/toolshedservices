@@ -5,7 +5,7 @@ import SuccessModal from "./SuccessModal";
 import "./Contact.css";
 import { LineWave } from "react-loader-spinner";
 
-const Contact = ({ handleContactSubmit ,loading}) => {
+const Contact = ({ handleContactSubmit,loading}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   // const [isNotValid, setIsNotValid] = useState(false);
@@ -54,7 +54,7 @@ const Contact = ({ handleContactSubmit ,loading}) => {
             <textarea
               className="contact-text-input"
               id="message"
-              placeholder="Enter your message"
+              placeholder="Enter your message" required
             />
           </FormControl>
            </Center>

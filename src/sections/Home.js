@@ -53,7 +53,7 @@ const HomePage = () => {
     //   setShowSuccessModal(true);
       
     // }, 2000);
-    
+
     // Send the email using EmailJS
     emailjs.send(
       process.env.REACT_APP_EMAILJS_SERVICE_ID, // Service ID from your EmailJS account
@@ -118,7 +118,7 @@ const HomePage = () => {
                     {showSuccessModal ? (
                       <SuccessForm  />
                     ) : (
-                      <Contact handleContactSubmit={handleContactSubmit} loading={loading} />
+                      <Contact handleContactSubmit={handleContactSubmit}  loading={loading} />
                     )}
                   </Center>
                 </Box>
