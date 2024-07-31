@@ -23,6 +23,7 @@ const HomePage = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [modalCloaseButtonStatus, setModalCloaseButtonStatus] = useState(true);
 
   const handleContactSubmit = (data) => {
     if (showSuccessModal) {
@@ -30,7 +31,6 @@ const HomePage = () => {
     }
     setLoading(true);
 
-    onClose();
     console.log("Contact form submitted");
     console.log(data.email);
     console.log(data.name);
@@ -43,10 +43,11 @@ const HomePage = () => {
       message:  data.message ,
     };
 
-    //checking for phone screen and pening the modal
-    if (!isLargeScreen) {
-      onOpen();
-    }
+    // //checking for phone screen and opening the modal
+    // if (isLargeScreen) {
+    // onClose();
+
+    // }
     setTimeout(() => {
       setLoading(false);
       setShowSuccessModal(true);
@@ -132,9 +133,10 @@ const HomePage = () => {
             onClose={onClose}
             handleContactSubmit={handleContactSubmit}
             loading={loading}
+            modalCloaseButtonStatus={modalCloaseButtonStatus}
             msg="Thanks for contacting us! We will get back to you soon."
             status="success"
-            childComponent={showSuccessModal ?(loading?<Spinner color="green.500" size="lg" thickness="2.5px" />: <SuccessModal />) : <Contact />}
+            childComponent={showSuccessModal ?(loading?<Spinner color="green.500" size="lg" thickness="2.5px" />: <SuccessForm />) : <Contact />}
           />
         )}
       </Box>

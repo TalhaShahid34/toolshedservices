@@ -127,3 +127,17 @@
       }
       
   }
+  @media screen and (min-width: 2000px) {
+    #contact-wrapper {
+      max-width: 400px;
+      max-height: 500px;
+      padding: 0 35px;
+    }
+  }
+  @media screen and (min-width: 2000px) {
+    #contact-wrapper {
+      max-width: 400px;
+      max-height: 500px;
+      padding: 0 35px;
+    }
+  }

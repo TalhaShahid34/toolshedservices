@@ -13,9 +13,13 @@ import {
 import Contact from './Contact';
 import SuccessModal from './SuccessModal';
 
-  function CustomModal({isOpen,onClose,childComponent,handleContactSubmit,msg,status,loading}) {
-   
- 
+  function CustomModal({isOpen,onClose,childComponent,modalCloaseButtonStatus,handleContactSubmit,msg,status,loading}) {
+   const tryClose = ()=>{
+    //  if(!loading){
+      console.log(loading);
+       onClose();
+    //  }  
+    };
     return (
       <>
         
@@ -24,8 +28,8 @@ import SuccessModal from './SuccessModal';
           <ModalOverlay 
            bg="rgba(5, 28, 104, 0.8)" // #051C68 with transparency
            backdropFilter="blur(0.9px) hue-rotate(90deg)"/>
-          <ModalContent bg="#F7B890">
-            <ModalCloseButton/>
+          <ModalContent bg="#F7B896">
+            {modalCloaseButtonStatus? <ModalCloseButton  onClick={onClose}/>:null}
           {React.cloneElement(childComponent, { handleContactSubmit,onClose,msg,status,loading})}
           </ModalContent>
         </Modal>
