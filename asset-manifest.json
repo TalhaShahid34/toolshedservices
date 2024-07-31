@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/toolshedservices/static/css/main.14c24499.css",
-    "main.js": "/toolshedservices/static/js/main.1df65136.js",
+    "main.css": "/toolshedservices/static/css/main.4fb63963.css",
+    "main.js": "/toolshedservices/static/js/main.5dacd3be.js",
     "static/js/453.ab2adbb9.chunk.js": "/toolshedservices/static/js/453.ab2adbb9.chunk.js",
     "static/media/Python.png": "/toolshedservices/static/media/Python.b07382034a8548cfd211.png",
     "static/media/React.png": "/toolshedservices/static/media/React.11f21bdc824620402fb9.png",
@@ -17,12 +17,12 @@
     "static/media/slick.ttf": "/toolshedservices/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/toolshedservices/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/toolshedservices/index.html",
-    "main.14c24499.css.map": "/toolshedservices/static/css/main.14c24499.css.map",
-    "main.1df65136.js.map": "/toolshedservices/static/js/main.1df65136.js.map",
+    "main.4fb63963.css.map": "/toolshedservices/static/css/main.4fb63963.css.map",
+    "main.5dacd3be.js.map": "/toolshedservices/static/js/main.5dacd3be.js.map",
     "453.ab2adbb9.chunk.js.map": "/toolshedservices/static/js/453.ab2adbb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.14c24499.css",
-    "static/js/main.1df65136.js"
+    "static/css/main.4fb63963.css",
+    "static/js/main.5dacd3be.js"
   ]
 }
